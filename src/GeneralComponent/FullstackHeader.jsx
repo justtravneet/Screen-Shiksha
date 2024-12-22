@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Button from '../component/Button';
+
 
 
 const FullstackHeader = () => {
@@ -59,14 +59,7 @@ const FullstackHeader = () => {
                         </div>
                     </div>
                     <div className="flex items-center gap-4">
-                        <Button   
-                            label="Request Callback"
-                            className="bg-green-500 hover:bg-green-600 hidden sm:block"
-                        />
-                        <Button
-                            label="Login"
-                            className="bg-green-500 hover:bg-green-600 hidden sm:block"
-                        />
+                       
                         <button
                             className="sm:hidden flex gap-2 items-center text-white justify-center px-2 py-2 rounded-md"
                             onClick={toggleMenu}
