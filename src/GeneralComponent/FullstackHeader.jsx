@@ -109,10 +109,10 @@ const FullstackHeader = () => {
                             className="bg-green-500  hidden lg:block"
                         />
                         <button
-                            className="lg:hidden flex gap-2 items-center text-white justify-center px-2 py-2 rounded-md"
+                            className="lg:hidden bg-black flex gap-2 items-center text-white justify-center px-2 py-2 rounded-md"
                             onClick={toggleMenu}
                         >
-                            <span className=" text-[13px]"><p className='mt-[0px]'>Courses</p></span>
+                            <span className=" text-[13px]"><p className='mt-[0px] '>Courses</p></span>
                             <svg
                                 className="w-6 h-6"
                                 fill="none"

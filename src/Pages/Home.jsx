@@ -1,5 +1,7 @@
 import React from 'react'
 import FullstackHeader from '../GeneralComponent/FullstackHeader'
+import Sectionone from '../Othercomponent/Homepage/Sectionone'
+
 
 
 const Home = () => {
@@ -10,7 +12,7 @@ const Home = () => {
         </div>
 
         <div>
-         
+              <Sectionone />
         </div>
          
     </div>
