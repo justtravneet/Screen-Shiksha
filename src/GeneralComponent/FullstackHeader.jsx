@@ -1,12 +1,24 @@
 import React, { useState } from 'react';
+import Button from '../component/Button';
 
 
 
 const FullstackHeader = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isJobBootcampOpen, setIsJobBootcampOpen] = useState(false);
+    const [isIITCertificationsOpen, setIsIITCertificationsOpen] = useState(false);
+
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+    };
+
+    const toggleJobBootcampMenu = () => {
+        setIsJobBootcampOpen(!isJobBootcampOpen);
+    };
+
+    const toggleIITCertificationsMenu = () => {
+        setIsIITCertificationsOpen(!isIITCertificationsOpen);
     };
 
     return (
@@ -47,21 +59,57 @@ const FullstackHeader = () => {
                                 </defs>
                             </svg>
                         </div>
-                        <div className="hidden sm:flex sm:space-x-8">
-                            <ul className="flex space-x-8">
-                                <li className="text-[#455379] hover:text-gray-400 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium">
-                                    <a href="#">Job Bootcamp</a>
+                        <div className="hidden sm:flex sm:space-x-8 hidden lg:block">
+                            <ul className="flex space-x-8 hidden lg:block">
+                                <li
+                                 onMouseEnter={() => setIsJobBootcampOpen(true)}
+                                 onMouseLeave={() => setIsJobBootcampOpen(false)}
+                                 className=" relative text-black  hover:bg-gray-100 hover:text-gray-400 inline-flex items-center px-2 py-2 rounded-xl border-b-2 border-transparent text-sm font-medium"
+                                 >
+                                    <a href="#"><p className='text-[18px] text-black'>Job Bootcamp</p></a>
+                                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                    {isJobBootcampOpen && (
+                                        <ul className="absolute left-0 mt-2 space-y-2 bg-white border rounded-md shadow-lg">
+                                            <li><a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Option 1</a></li>
+                                            <li><a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Option 2</a></li>
+                                        </ul>
+                                    )}
+                                   
                                 </li>
-                                <li className="text-black-500 hover:text-gray-400 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium">
-                                    <a href="#">Data Analytics</a>
+                                <li
+                                 onMouseEnter={() => setIsIITCertificationsOpen(true)}
+                                 onMouseLeave={() => setIsIITCertificationsOpen(false)}
+                                 className=" relative text-black  hover:bg-gray-100 hover:text-gray-400 inline-flex items-center px-2 py-2 rounded-xl border-b-2 border-transparent text-sm font-medium"
+                                 >
+                                    <a href="#"><p className='text-[18px] text-black'>IIT Certifications</p></a>
+                                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                    {isIITCertificationsOpen  && (
+                                        <ul className="absolute left-0 mt-2 space-y-2 bg-white border rounded-md shadow-lg">
+                                            <li><a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Option 1</a></li>
+                                            <li><a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Option 2</a></li>
+                                        </ul>
+                                    )}
+                                   
                                 </li>
+
                             </ul>
                         </div>
                     </div>
                     <div className="flex items-center gap-4">
-                       
+                        <Button
+                            label="Request Callback"
+                            className="bg-green-500 hover:bg-green-600 hidden lg:block"
+                        />
+                        <Button
+                            label="Login"
+                            className="bg-green-500  hidden lg:block"
+                        />
                         <button
-                            className="sm:hidden flex gap-2 items-center text-white justify-center px-2 py-2 rounded-md"
+                            className="lg:hidden flex gap-2 items-center text-white justify-center px-2 py-2 rounded-md"
                             onClick={toggleMenu}
                         >
                             <span className=" text-[13px]"><p className='mt-[0px]'>Courses</p></span>
@@ -85,7 +133,7 @@ const FullstackHeader = () => {
                 </div>
             </div>
             {isMenuOpen && (
-                <div className="sm:hidden bg-white shadow-lg p-4">
+                <div className="lg:hidden bg-white shadow-lg p-4">
                     <ul className="space-y-4">
                         <li className="text-[#455379] hover:text-gray-400">
                             <a href="#">Job Bootcamp</a>
@@ -101,7 +149,7 @@ const FullstackHeader = () => {
                         />
                         <Button
                             label="Login"
-                            className="bg-green-500 hover:bg-green-600 w-full"
+                            className="bg-green-500w-full"
                         />
                     </div>
                 </div>
