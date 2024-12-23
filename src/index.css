@@ -22,3 +22,30 @@
     }
   }
   
+
+  /* Add this to your global CSS file (e.g., styles.css) */
+
+/* Keyframes for smooth left-to-right scrolling */
+@keyframes scrollLeftToRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%); /* Move the scroll by the full width of the container */
+    }
+  }
+  
+  .scroll-container {
+    display: flex;
+    overflow: hidden; /* Hide the overflow to create the scrolling effect */
+  }
+  
+  .scroll-content {
+    display: flex;
+    animation: scrollLeftToRight 20s linear infinite; /* Smooth infinite scroll */
+  }
+  
+  .scroll-content > div {
+    margin-right: 20px; /* Optional: Space between the cards */
+  }
+  
