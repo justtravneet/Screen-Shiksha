@@ -2,3 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+.screen-shiksha {
+    position: relative;
+    display: inline-block;
+    color: black;
+    background: linear-gradient(to right, #ffffff 20%, #13010166 50%, #ffffff 80%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: light-reflect 2s infinite;
+  }
+  
+  @keyframes light-reflect {
+    0% {
+      background-position: -100% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+  
