@@ -54,7 +54,7 @@ const Webinarform = () => {
 
                             <div>
                                 <Button
-                                    className='w-[100%] bg-green-500 flex items-center justify-center gap-2 flex items-center justify-center'
+                                    className='w-[100%] bg-green-500 flex items-center justify-center gap-2 '
                                     label={
                                         <>
                                             Continue booking webinar
