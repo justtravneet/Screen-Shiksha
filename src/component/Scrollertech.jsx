@@ -8,7 +8,7 @@ const Scrollertech = () => {
     <div className="py-[80px] flex flex-col gap-[30px]">
       <div className="flex justify-center lg:gap-[130px]">
         <p className="text-[22px] font-semibold text-center">
-          Our Ninjas at top tech companies
+        Ninjas who took this bootcamp got hired at
         </p>
       </div>
 
