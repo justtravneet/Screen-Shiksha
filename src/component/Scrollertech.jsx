@@ -5,7 +5,7 @@ import google from '../assets/Images/google.png';
 import {ArrowLineDown } from "@phosphor-icons/react";
 const Scrollertech = () => {
   return (
-    <div className="py-[80px] flex flex-col gap-[30px]">
+    <div className="py-[0px] flex flex-col gap-[30px]">
       <div className="flex justify-center lg:gap-[130px]">
         <p className="text-[22px] font-semibold text-center">
         Ninjas who took this bootcamp got hired at
@@ -36,12 +36,12 @@ const Scrollertech = () => {
         </div>
       </div>
       
-      <div className='flex gap-[10px] items-center justify-center'>
+      {/* <div className='flex gap-[10px] items-center justify-center'>
          <ArrowLineDown size={22} color='red' weight="fill" />
          <p className="text-[18px] text-red-600 font-semibold text-center">
            Download Placement report
         </p>
-      </div>
+      </div> */}
         
     </div>
   );
